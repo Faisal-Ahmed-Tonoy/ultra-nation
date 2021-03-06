@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+import Country from './Competent/Country';
 
 function App() {
  
@@ -13,6 +14,10 @@ function App() {
   return (
     <div>
       <h1>Countries Number : {countries.length}</h1>
+      {
+        countries.map(country => <Country country={country}> </Country>)
+       
+      }
        
     </div>
   );
