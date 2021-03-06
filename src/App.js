@@ -2,6 +2,8 @@
 import './App.css';
  
 import Home from './Competent/Home/Home';
+import CountryDetail from './Competent/CountryDetail/CountryDetail';
+ 
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,8 +22,8 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/">
-            <Home />
+          <Route exact path="/country/:countryAlpha2Code">
+       <CountryDetail></CountryDetail>
           </Route>
           <Route path="*">
            <NoMatch></NoMatch>
