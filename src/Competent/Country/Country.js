@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Country = (props) => {
-    const {name,capital,population} =props.country;
+    const {name,capital,population,alpha2Code} =props.country;
     const countryStyle ={
         float:'left',
         
@@ -13,9 +14,11 @@ const Country = (props) => {
     }
     return (
         <div style={countryStyle}>
-            <h1>Country Name :{name}</h1>
-            <h2> Capital:{capital}</h2>
+            <p>Country Name :{name}</p>
+            <p> Capital:{capital}</p>
             <p>Population:{population}</p>
+            <p>Code:<Link to={`/country/${alpha2Code}`}>Show Details {alpha2Code}</Link></p>
+           
             
         </div>
     );
