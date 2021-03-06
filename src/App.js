@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+
 import { useEffect, useState } from 'react';
 import Country from './Competent/Country';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
  
