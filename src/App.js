@@ -1,17 +1,33 @@
-import logo from './logo.svg';
+ 
 import './App.css';
-import { useEffect, useState } from 'react';
+ 
 import Home from './Competent/Home/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import NoMatch from './Competent/NoMatch/NoMatch';
  
 
 function App() {
  
  
   return (
-    <div>
-     <Home></Home>
-       
-    </div>
+    <Router>
+c      <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="*">
+           <NoMatch></NoMatch>
+          </Route>
+          </Switch>
+  </Router>
   );
 }
 

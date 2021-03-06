@@ -4,6 +4,7 @@ const Country = (props) => {
     const {name,capital,population} =props.country;
     const countryStyle ={
         float:'left',
+        
         border:'1px solid purple',
         margin:'20px',
         padding:'20px',
